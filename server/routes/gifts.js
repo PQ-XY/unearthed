@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename)
 
 const router = express.Router()
 
-router.get('/gifts', (req, res) => {
+router.get('/', (req, res) => {
   res.status(200).json(giftData)
 })
 
