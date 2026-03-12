@@ -13,10 +13,18 @@ const App = () => {
 
 
   useEffect(() => {
+    const fetchGifts = async () => {
+      const response = await fetch('/gifts', {
+        cache: "no-store"
+    });
+      const data = await response.json();
 
+      console.log("DATA:", data); 
+      
+      setGifts(data);
+    };
   
-    
-
+    fetchGifts();
   }, []);
 
 
